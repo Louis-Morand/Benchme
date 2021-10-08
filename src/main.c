@@ -15,18 +15,47 @@ TODO: fait une fonction pour mettre au format csv => plus propre ?
 */
 int main(int argc, char *argv[])
 {
-	float tableau[] = {1,2,3,4,5};
+	float tableau[] = {3.0,2.0,5.0,1.0,4.0};
 	int tableau2[] = {5,7,15,365,1};
 
-	printf("\nTABLEAU AVANT:\t");
+    printf("\nINSERTION - TABLEAU AVANT:\t");
+    for (int i = 0; i<=4; i++){
+        printf("%.2f ", tableau[i]);
+    }
+
+    tri_insertion(tableau, 5);
+
+    printf("\nINSERTION - TABLEAU APRES:\t");
+    for (int i = 0; i<=4; i++){
+        printf("%.2f ", tableau[i]);
+    }
+
+    printf("%c\n", " ");
+
+	printf("\nTAS - TABLEAU AVANT:\t");
     for (int i = 0; i<=4; i++){
         printf("%d ", tableau2[i]);
     }
-	tri_insertion(tableau);
+
 	//tri_bulle(tableau2, 5);
     tri_tas(tableau2, 5);
 
-    printf("\nTABLEAU APRES:\t");
+    printf("\nTAS - TABLEAU APRES:\t");
+    for (int i = 0; i<=4; i++){
+        printf("%d ", tableau2[i]);
+    }
+
+    printf("%c\n", " ");
+
+    printf("\nBULLE - TABLEAU AVANT:\t");
+    for (int i = 0; i<=4; i++){
+        printf("%d ", tableau2[i]);
+    }
+    
+	//tri_bulle(tableau2, 5);
+    tri_bulle(tableau2, 5);
+
+    printf("\nBULLE - TABLEAU APRES:\t");
     for (int i = 0; i<=4; i++){
         printf("%d ", tableau2[i]);
     }

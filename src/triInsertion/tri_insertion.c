@@ -1,21 +1,22 @@
 #include <stdio.h>
 #include "tri_insertion.h"
 
-int i = 0;
+int i, j;
 float min, temp;
 
 
-void tri_insertion(float *tab)
+void tri_insertion(float *tab, int tailletab)
 {
-    // printf("%s", tab);
-    min = tab[i];
-    if(tab[i+1]<tab[i])
-    {
-        min = tab[i+1];
-    }
 
-    temp = tab[i+1];
-    tab[i+1] = tab[i];
-    tab[i] = temp;
-    // printf("%s", tab);
+  for (i=1 ; i<=tailletab-1; i++) {
+    j = i;
+ 
+    while (j > 0 && tab[j-1] > tab[j]) {
+      temp = tab[j];
+      tab[j] = tab[j-1];
+      tab[j-1] = temp;
+
+      j--;
+    }
+  }
 }
