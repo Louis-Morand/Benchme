@@ -6,9 +6,10 @@ But:faire le tri d'un tableau donné en parmètre par bulle, soit: tri les valeu
 #include <stdio.h>
 #include "tri_bulle.h"
 
-void tri_bulle (int *tab, int tailletab){
+void tri_bulle (float *tab, int tailletab){
     //on ne peux pas trouver la taille du tableau via sizeoftab/sizeof(char), donc on la passe en parametre
-    int val_inter, nb_chmgt=0;
+    float val_inter;
+    int nb_chmgt=0;
     do{
         nb_chmgt = 0;
         for (int i =0; i<tailletab-1; i++){

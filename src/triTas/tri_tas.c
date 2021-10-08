@@ -8,13 +8,11 @@ puis de travailler récursivement sur le tableau de manière à ordonner le tabl
 */
 #include "tri_tas.h"
 #include <stdio.h>
-//https://fr.wikipedia.org/wiki/Tri_par_tas
-//https://fr.wikipedia.org/wiki/Arbre_binaire
-//TODO:DEMANDER A LOURENCO l'orga, soit 1 fichier .h pour 1 fichier .C ou un seul fichier .h pour tous les ficheirs .C liés ?
 
-void tri_tas (int *tab, int max){
-    int nb_inter, ind_inter;
-    int nb_max = tab[max-1], ind_max = max-1;//le max temporaire est le nombre le plus à droite du tableau
+void tri_tas (float *tab, int max){
+    float nb_inter, ind_inter;
+    float nb_max = tab[max-1];
+    int ind_max = max-1;//le max temporaire est le nombre le plus à droite du tableau
     if(max==0){
         return;//quand on arrive en bout de tableau, il aura normalement été trié
     }
