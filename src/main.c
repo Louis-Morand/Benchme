@@ -5,6 +5,7 @@ Fonction globale regroupant l'affectation, les tests, et le rendu au format .csv
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "./triInsertion/tri_insertion.h"
 #include "./triBulle/tri_bulle.h"
 #include "./triSelection/tri_selection.h"

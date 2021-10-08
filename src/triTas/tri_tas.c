@@ -10,7 +10,7 @@ puis de travailler récursivement sur le tableau de manière à ordonner le tabl
 #include <stdio.h>
 
 void tri_tas (float *tab, int max){
-    float nb_inter, ind_inter;
+    float nb_inter;
     float nb_max = tab[max-1];
     int ind_max = max-1;//le max temporaire est le nombre le plus à droite du tableau
     if(max==0){
