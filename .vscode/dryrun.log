@@ -3,7 +3,12 @@ make: Entering directory '/home/student/Algo-Lourenco/TP2'
  
 mkdir -p output
 gcc -Wall -Wextra -g -Iinclude -c src/main.c  -o src/main.o
-gcc -Wall -Wextra -g -Iinclude -o output/main src/main.o  -Llib
+gcc -Wall -Wextra -g -Iinclude -c src/tools/conv_csv.c  -o src/tools/conv_csv.o
+gcc -Wall -Wextra -g -Iinclude -c src/triBulle/tri_bulle.c  -o src/triBulle/tri_bulle.o
+gcc -Wall -Wextra -g -Iinclude -c src/triInsertion/tri_insertion.c  -o src/triInsertion/tri_insertion.o
+gcc -Wall -Wextra -g -Iinclude -c src/triSelection/tri_selection.c  -o src/triSelection/tri_selection.o
+gcc -Wall -Wextra -g -Iinclude -c src/triTas/tri_tas.c  -o src/triTas/tri_tas.o
+gcc -Wall -Wextra -g -Iinclude -o output/main src/main.o src/tools/conv_csv.o src/triBulle/tri_bulle.o src/triInsertion/tri_insertion.o src/triSelection/tri_selection.o src/triTas/tri_tas.o  -Llib
 echo Executing 'all' complete!
 make: Leaving directory '/home/student/Algo-Lourenco/TP2'
  

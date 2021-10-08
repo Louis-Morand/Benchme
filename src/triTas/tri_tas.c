@@ -14,15 +14,15 @@ puis de travailler récursivement sur le tableau de manière à ordonner le tabl
 
 void tri_tas (int *tab, int max){
     int nb_inter, ind_inter;
-    int nb_max = tab[max], ind_max = max;//le max temporaire est le nombre le plus à droite du tableau
-    if(max==1){
+    int nb_max = tab[max-1], ind_max = max-1;//le max temporaire est le nombre le plus à droite du tableau
+    if(max==0){
         return;//quand on arrive en bout de tableau, il aura normalement été trié
     }
-    for (int i = max; i >= 0; i--){//parcours pour recherche du plus grand su 1,max
+    for (int i = ind_max; i >= 0; i--){//parcours pour recherche du plus grand su 1,max
         if(nb_max < tab[i]){//si un max est trouvé, on inverse le nombre avec le nouveau max, si <= boucle d'echange infinie possible
             nb_inter=nb_max;//on stocke l'ancien max
             nb_max=tab[i];//on renseigne le nouveau maximum
-            tab[max]=tab[i];//on place le nouveau max en bout de tableau
+            tab[ind_max]=tab[i];//on place le nouveau max en bout de tableau
             tab[i]=nb_inter;//on place l'ancien max à l'ancienne position du nouveau
         }
     }

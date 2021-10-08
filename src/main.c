@@ -23,7 +23,8 @@ int main(int argc, char *argv[])
         printf("%d ", tableau2[i]);
     }
 	tri_insertion(tableau);
-	tri_bulle(tableau2, 5);
+	//tri_bulle(tableau2, 5);
+    tri_tas(tableau2, 5);
 
     printf("\nTABLEAU APRES:\t");
     for (int i = 0; i<=4; i++){
