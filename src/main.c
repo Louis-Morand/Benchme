@@ -36,8 +36,14 @@ int main(int argc, char *argv[])
     for (int i = 0; i<=4; i++){
         printf("%d ", tableau2[i]);
     }
+<<<<<<< HEAD
 
 	tri_bulle(tableau2, 5);
+=======
+	tri_insertion(tableau);
+	//tri_bulle(tableau2, 5);
+    tri_tas(tableau2, 5);
+>>>>>>> dbef06cea0d4512407eec92e891947f4deff0ba6
 
     printf("\nBULLE - TABLEAU APRES:\t");
     for (int i = 0; i<=4; i++){
