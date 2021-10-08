@@ -1,6 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/student/Algo-Lourenco/TP2'
- 
 mkdir -p output
 gcc -Wall -Wextra -g -Iinclude -c src/main.c  -o src/main.o
 gcc -Wall -Wextra -g -Iinclude -c src/tools/conv_csv.c  -o src/tools/conv_csv.o
