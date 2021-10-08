@@ -30,9 +30,8 @@ int main(int argc, char *argv[])
         printf("%.2f ", tableau[i]);
     }
 
-    printf("%c\n", " ");
 
-	printf("\nTAS - TABLEAU AVANT:\t");
+	printf("\n\nTAS - TABLEAU AVANT:\t");
     for (int i = 0; i<=4; i++){
         printf("%d ", tableau2[i]);
     }
@@ -45,9 +44,8 @@ int main(int argc, char *argv[])
         printf("%d ", tableau2[i]);
     }
 
-    printf("%c\n", " ");
 
-    printf("\nBULLE - TABLEAU AVANT:\t");
+    printf("\n\nBULLE - TABLEAU AVANT:\t");
     for (int i = 0; i<=4; i++){
         printf("%d ", tableau2[i]);
     }
