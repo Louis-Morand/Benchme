@@ -14,53 +14,81 @@ Pour les tests: incluer blibliotheque time pour mesurer le temps d'exécution de
 mettre 1 time avant 1 time apres et faire la diff des 2 pour voir temps d'execution
 TODO: fait une fonction pour mettre au format csv => plus propre ?
 */
-int main(int argc, char *argv[]){
+int main(){
     
     int taille = 10;
     float tableau[taille];
     for(int i=0;i<=taille; i++){
         tableau[i]= ((rand() % 1000000)+1);
     }
-   
 
-    printf("\nINSERTION - TABLEAU AVANT:\t");
-    for (int i = 0; i<=taille; i++){
-        printf("%.f ", tableau[i]);
-    }
-
-    tri_insertion(tableau, taille);
-
-    printf("\nINSERTION - TABLEAU APRES:\t");
-    for (int i = 0; i<=taille; i++){
-        printf("%.2f ", tableau[i]);
-    }
-
-
-	printf("\nTAS - TABLEAU AVANT:\t");
-    for (int i = 0; i<=taille; i++){
-        printf("%.2f ", tableau[i]);
-    }
-
-    tri_tas(tableau, taille);
-
-    printf("\nTAS - TABLEAU APRES:\t");
-    for (int i = 0; i<=taille; i++){
-        printf("%.2f ", tableau[i]);
-    }
-
-
-    printf("\nBULLE - TABLEAU AVANT:\t");
-    for (int i = 0; i<=taille; i++){
-        printf("%.2f ", tableau[i]);
+    float tab1[taille];
+    for(int i=0;i<=taille; i++){
+        tab1[i] = tableau[i];
     }
     
-    tri_bulle(tableau, taille);
-
-    printf("\nBULLE - TABLEAU APRES:\t");
+    printf("\n\nINSERTION - TABLEAU AVANT:\n");
     for (int i = 0; i<=taille; i++){
-        printf("%.2f ", tableau[i]);
+        printf("%.f ", tab1[i]);
     }
-    printf("\n");
+
+    tri_insertion(tab1, taille);
+
+    printf("\nINSERTION - TABLEAU APRES:\n");
+    for (int i = 0; i<=taille; i++){
+        printf("%.2f ", tab1[i]);
+    }
+
+    float tab2[taille];
+    for(int i=0;i<=taille; i++){
+        tab2[i] = tableau[i];
+    }
+
+    printf("\n\nSELECTION - TABLEAU AVANT:\n");
+    for (int i = 0; i<=taille; i++){
+        printf("%.f ", tab2[i]);
+    }
+
+    tri_insertion(tab2, taille);
+
+    printf("\nSELECTION - TABLEAU APRES:\n");
+    for (int i = 0; i<=taille; i++){
+        printf("%.2f ", tab2[i]);
+    }
+
+    float tab3[taille];
+    for(int i=0;i<=taille; i++){
+        tab3[i] = tableau[i];
+    }
+
+	printf("\n\nTAS - TABLEAU AVANT:\n");
+    for (int i = 0; i<=taille; i++){
+        printf("%.2f ", tab3[i]);
+    }
+
+    tri_tas(tab3, taille);
+
+    printf("\nTAS - TABLEAU APRES:\n");
+    for (int i = 0; i<=taille; i++){
+        printf("%.2f ", tab3[i]);
+    }
+
+    float tab4[taille];
+    for(int i=0;i<=taille; i++){
+        tab4[i] = tableau[i];
+    }
+
+    printf("\n\nBULLE - TABLEAU AVANT:\n");
+    for (int i = 0; i<=taille; i++){
+        printf("%.2f ", tab4[i]);
+    }
+    
+    tri_bulle(tab4, taille);
+
+    printf("\nBULLE - TABLEAU APRES:\n");
+    for (int i = 0; i<=taille; i++){
+        printf("%.2f ", tab4[i]);
+    }
 
 	return (0);
 }
