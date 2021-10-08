@@ -1,17 +1,23 @@
 #include "tri_selection.h"
 #include <stdio.h>
 
-float temp, min;
+float temp;
+int indexMin;
 
 void tri_selection(float *tab, int tailletab){
 
     for(int i=0; i<tailletab-1; i++)
     {
-        if(tab[i]<tab[i+1]){
-            min = tab[i];
+        indexMin = i;
+        for(int j=i; i<tailletab; j++)
+        {
+            if(tab[j]<tab[indexMin])
+            {
+                indexMin = j;
+            }
         }
-        printf("%f", min);
-
-        //TODO: a finir
+        temp = tab[i];
+        tab[i] = tab[indexMin];
+        tab[indexMin] = temp;
     }
 }
