@@ -45,7 +45,9 @@ int main(int argc, char *argv[])
         printf("%d ", tableau2[i]);
     }
 
-    	printf("\nBULLE - TABLEAU AVANT:\t");
+    printf("%c\n", " ");
+
+    printf("\nBULLE - TABLEAU AVANT:\t");
     for (int i = 0; i<=4; i++){
         printf("%d ", tableau2[i]);
     }
