@@ -35,7 +35,6 @@ int main(int argc, char *argv[]){
         printf("%.2f ", tableau[i]);
     }
 
-    printf("%c\n", " ");
 
 	printf("\nTAS - TABLEAU AVANT:\t");
     for (int i = 0; i<=taille; i++){
@@ -49,7 +48,6 @@ int main(int argc, char *argv[]){
         printf("%.2f ", tableau[i]);
     }
 
-    printf("%c\n", " ");
 
     printf("\nBULLE - TABLEAU AVANT:\t");
     for (int i = 0; i<=taille; i++){
