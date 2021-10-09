@@ -1,9 +1,13 @@
-/*
-Fonction tri_bulle
-Auteur: Louis MORAND, Benoit ARQUILLIERE
-Version : 1
-Fichier regroupant les différentes fonctions de tri, ainsi que celle de création de tableau, et l'appel à l'ecriture fichier
-*/
+/**
+ * @file tests_generiques.c
+ * @author Louis MORAND, Benoit ARQUILLIERE
+ * @brief Fichier regroupant les différentes fonctions de tri, ainsi que celle de création de tableau, et l'appel à l'ecriture fichier
+ * @version 2
+ * @date 2021-10-09
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,9 +25,9 @@ Fichier regroupant les différentes fonctions de tri, ainsi que celle de créati
  * 
  *  Cette fonction permet de créer un tableau via malloc, et de la remplir de valeurs pseudo-aléatoires
  *  Elle initialise un tableau de taille donnée, puis le remplis avec les nombres pseudo-aléatoires générés selon le schéma donné
- * @param taille_tab taille du tablau à crer
- * @param graine Graine, pour la fonction srand
- * @return float* Retourtne le tableau créé
+ * @param[in] taille_tab taille du tablau à crer
+ * @param[in] graine Graine, pour la fonction srand
+ * @param[out] float* Retourtne le tableau créé
  */
 float* crea_tab(int taille_tab, int graine){
     float *tableau;

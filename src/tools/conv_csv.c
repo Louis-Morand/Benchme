@@ -1,7 +1,13 @@
-/*Fonction main
-Auteur: Louis MORAND, Benoit ARQUILLIERE
-Version : 2
-*/
+/**
+ * @file conv_csv.c
+ * @author Louis MORAND, Benoit ARQUILLIERE
+ * @brief Fonction permettant l'ecriture dans un fichier au format .csv des données passées en paramètre
+ * @version 2
+ * @date 2021-10-09
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,10 +25,10 @@ Version : 2
  *  puis écrit les données à la suite, au format .csv, séparé par des ";".
  *
  * 
- * @param nomFich Le nom du fichier sur lequel écrire
- * @param TypeTri Le nom du type de tri exécuté
- * @param taille_Echantillon La taille du tableau sur lequel les tests ont été faits
- * @param Exec_Moyen Le temps d'exécution moyen pour le type de tri et la taille de tableau, en s
+ * @param[in] nomFich Le nom du fichier sur lequel écrire
+ * @param[in] TypeTri Le nom du type de tri exécuté
+ * @param[in] taille_Echantillon La taille du tableau sur lequel les tests ont été faits
+ * @param[in] Exec_Moyen Le temps d'exécution moyen pour le type de tri et la taille de tableau, en s
  */
 void data_to_csv(char *nomFich, char *TypeTri,int taille_Echantillon, float Exec_Moyen){
     int taille_fich;
