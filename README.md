@@ -43,7 +43,7 @@
 * [MORAND Louis](https://github.com/Opystoglyphe)
 * [ARQUILLIERE Benoit](https://github.com/benoit-arquilliere)
 
-
+<br />
 <div id="objectifs"></div>
 
 ## Objet du projet
@@ -74,31 +74,45 @@ De plus les grandes lignes à respecter sont les suivantes :
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Doxygen](https://www.doxygen.nl/index.html)
 
-
+<br />
 <div id="commands"></div>  
 
 ## Usage des commandes
 
 Afin d'utiliser le programme, plusieurs commandes on été ajouté pour permettre d'effectuer des actions spécifiques.  
 
-* make --> Permet de compiler (build) le projet.
-* make clean --> Permet de 
-* ./output/main data.csv --> Permet d'éxecuter le programme et de générer un fichier data.csv où les données seront stockées.
+- Compiler (build) le projet : 
+```
+make
+```
+- Nettoier les répertoires contenant le code source (supprime les fichiers .o issus de la compilation) :
+```
+make clean 
+```
+- Extraire la documentation technique :
+```
+make documentation 
+```
+- Executer le programme et de générer un fichier data.csv où les données seront stockées :
+```
+./output/main data.csv 
+```
 
 
-
+<br />
 <div id="resultats"></div>  
 
 ## Résultats attendus
 
-<!-- Description des résultats attendus -->
+Le programme doit tester les tri en leur passant 3 tableaux de taille déterminées et dont les valeurs sont aléatoirement selectionnées. Suite à cela il doit être capable de créer ou modifier un fichier CSV afin d'y inserer les temps d'éxecutions obtenus. Il sera ensuite possible, à l'aide d'un tableur, de visualiser les données et de créer des graphiques à partir de ces dernières.
 
-
+<br />
 <div id="futur"></div>  
 
 ## Evolutions à venir
 
-<!-- Description des évolutions possibles -->
+Actuellement le programme ne permet que de trier des valeurs dans le sens croissant, il serait possible d'ajouter la possibilité de faire des tris décroissants.  
+Il existe de nombreux autres algorithmes de tri, il serait donc possible d'en ajouter d'avantage graçe à la flexibilité du code. Il serait également interessant de pouvoir choisir au lancement du programme le tri souhaité, ainsi que le nombre de tableau à tester.
 
 
 <p align="right">|<a href="#top">Revenir en haut</a>|</p>
