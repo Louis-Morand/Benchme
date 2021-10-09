@@ -2,7 +2,7 @@
 Fonction tri_bulle
 Auteur: Louis MORAND, Benoit ARQUILLIERE
 Version : 1
-But:faire le tri d'un tableau donné en paramètre par sélection
+But: faire le tri d'un tableau donné en paramètre par sélection
 Soit: reporter les valeurs
 */
 #include "tri_selection.h"
@@ -18,12 +18,13 @@ void tri_selection(float *tab, int tailletab){
         indexMin = i;
         for(int j=i; j<tailletab; j++)
         {
-            if(tab[j]<tab[indexMin])
+            if(tab[j]<tab[indexMin]) //on récupère l'index de la valeur minimum
             {
                 indexMin = j;
             }
         }
-        temp = tab[i];
+        //inversion des valeurs
+        temp = tab[i]; 
         tab[i] = tab[indexMin];
         tab[indexMin] = temp;
     }
