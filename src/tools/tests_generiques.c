@@ -4,6 +4,7 @@ Auteur: Louis MORAND, Benoit ARQUILLIERE
 Version : 1
 Fichier regroupant les différentes fonctions de tri
 */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -14,9 +15,15 @@ Fichier regroupant les différentes fonctions de tri
 #include "../triSelection/tri_selection.h"
 #include "../triTas/tri_tas.h"
 
+
+/**
+ * @brief Fonction de création et remplissage du tableau selon les paramètres donnés.
+ * 
+ * @param taille_tab 
+ * @param graine 
+ * @return float* 
+ */
 float* crea_tab(int taille_tab, int graine){
-    
-    //Fonction de création et remplissage du tableau selon les paramètres donnés.
     float *tableau;
     tableau = malloc(taille_tab*sizeof(float));
     srand(graine);
@@ -26,6 +33,10 @@ float* crea_tab(int taille_tab, int graine){
     return tableau;
 }
 
+/**
+ * @brief Fonction de test du tri à bulle
+ * 
+ */
 void test_Tri_Bulle(char *nomFich){
     float *tableau, moyenne;
     char typeTri[]="Tri_Bulle";
@@ -51,6 +62,10 @@ void test_Tri_Bulle(char *nomFich){
     }
 }
 
+/**
+ * @brief Fonction de test du tri à Insertion
+ * 
+ */
 void test_Tri_Insertion(char *nomFich){
     float *tableau, moyenne;
     char typeTri[]="Tri_Insertion";
@@ -77,6 +92,10 @@ void test_Tri_Insertion(char *nomFich){
     }
 }
 
+/**
+ * @brief Fonction de test du tri par Selection
+ * 
+ */
 void test_Tri_Selection(char *nomFich){
     float *tableau, moyenne;
     char typeTri[]="Tri_Selection";
@@ -103,6 +122,10 @@ void test_Tri_Selection(char *nomFich){
     }
 }
 
+/**
+ * @brief Fonction de test du tri par Tas
+ * 
+ */
 void test_Tri_Tas(char *nomFich){
     float *tableau, moyenne;
     char typeTri[]="Tri_Tas";

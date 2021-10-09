@@ -1,9 +1,6 @@
-/*
-Fonction d'ecriture/ de création du fichier csv
+/*Fonction main
 Auteur: Louis MORAND, Benoit ARQUILLIERE
-Version : 1
-Fonction permettant la conversion au format .csv des données passées en paramètre
-Prends en entrée le type de tri, la taille de l'echantillon, et le temps d'exécution, et kes rajoute sur une ligne du fichier csv créé
+Version : 2
 */
 
 #include <stdio.h>
@@ -14,7 +11,14 @@ Prends en entrée le type de tri, la taille de l'echantillon, et le temps d'exé
 #include "../triSelection/tri_selection.h"
 #include "../triTas/tri_tas.h"
 
-
+/**
+ * @brief Fonction permettant la conversion au format .csv des données passées en paramètre
+ *        Prends en entrée les temps moyens de calcul pour les 4 fonctions et eur type, les écrit sur un fichier .Csv, créé ou ouvert au besoin
+ * 
+ * @param TypeTri 
+ * @param taille_Echantillon 
+ * @param Exec_Moyen 
+ */
 void data_to_csv(char *nomFich, char *TypeTri,int taille_Echantillon, float Exec_Moyen){
     int taille_fich;
     FILE *fich;//Création d'un pointeur de type fichier
