@@ -13,7 +13,7 @@ int indexMin;
 
 /**
  * @brief Faire le tri d'un tableau donné en paramètre par sélection
- *        Soit: reporter les valeurs
+ *        Soit: reporter les valeurs à leur juste position dans le tableau
  * 
  * @param tab 
  * @param tailletab 

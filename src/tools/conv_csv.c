@@ -12,12 +12,17 @@ Version : 2
 #include "../triTas/tri_tas.h"
 
 /**
- * @brief Fonction permettant la conversion au format .csv des données passées en paramètre
- *        Prends en entrée les temps moyens de calcul pour les 4 fonctions et eur type, les écrit sur un fichier .Csv, créé ou ouvert au besoin
+ * @brief Fonction permettant l'ecriture dans un fichier au format .csv des données passées en paramètre
  * 
- * @param TypeTri 
- * @param taille_Echantillon 
- * @param Exec_Moyen 
+ *  Prends en entrée le temps moyen de calcul, le type de fonction utilisé, le nom du fichier dans lequel écrire
+ *  Cette fonction ouvre (ou crée un fichier) avec le nom passé en paramètre, vérifie si il est vide pour l'ajout de l'entete,
+ *  puis écrit les données à la suite, au format .csv, séparé par des ";".
+ *
+ * 
+ * @param nomFich Le nom du fichier sur lequel écrire
+ * @param TypeTri Le nom du type de tri exécuté
+ * @param taille_Echantillon La taille du tableau sur lequel les tests ont été faits
+ * @param Exec_Moyen Le temps d'exécution moyen pour le type de tri et la taille de tableau, en s
  */
 void data_to_csv(char *nomFich, char *TypeTri,int taille_Echantillon, float Exec_Moyen){
     int taille_fich;

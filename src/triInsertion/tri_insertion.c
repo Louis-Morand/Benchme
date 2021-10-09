@@ -13,10 +13,10 @@ float val;
 
 /**
  * @brief Faire le tri d'un tableau donné en parmètre par insertion
- *        Sélectionner une valeur, et la déplacer dans le tableau jusqu'a ce qu'elle soit à sa place
+ *        Sélectionner une valeur, et la déplacer dans le tableau jusqu'a ce qu'elle soit à sa place.
  * 
- * @param tab 
- * @param tailletab 
+ * @param tab Tableau à trier
+ * @param tailletab Taille du tableau
  */
 void tri_insertion(float *tab, int tailletab)
 {
