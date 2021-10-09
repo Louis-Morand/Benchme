@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "tools.h"
 #include "../triBulle/tri_bulle.h"
 #include "../triInsertion/tri_insertion.h"
