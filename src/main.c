@@ -12,19 +12,15 @@ Fonction globale regroupant l'affectation, les tests, et le rendu au format .csv
 #include "./triBulle/tri_bulle.h"
 #include "./triSelection/tri_selection.h"
 #include "./triTas/tri_tas.h"
-/*
-Pour les tests: incluer blibliotheque time pour mesurer le temps d'exécution des progs
-mettre 1 time avant 1 time apres et faire la diff des 2 pour voir temps d'execution
-TODO: fait une fonction pour mettre au format csv => plus propre ?
-*/
-//Attention, tri à bulle limité à 10⁵ maximum
 
-void main(){
 
-    void test_Tri_Bulle();
-    test_Tri_Insertion();
-    test_Tri_Selection();
-    test_Tri_Tas();
+int main(int argc, char *argv[]){
 
-	return;
+    
+    test_Tri_Bulle(argv[1]);
+    test_Tri_Insertion(argv[1]);
+    test_Tri_Selection(argv[1]);
+    test_Tri_Tas(argv[1]);
+
+	return (0);
 }

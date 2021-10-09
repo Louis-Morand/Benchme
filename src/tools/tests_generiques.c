@@ -26,8 +26,9 @@ float* crea_tab(int taille_tab, int graine){
     return tableau;
 }
 
-void test_Tri_Bulle(){
+void test_Tri_Bulle(char *nomFich){
     float *tableau, moyenne;
+    char typeTri[]="Tri_Bulle";
     int taille=100;
     time_t deb, fin;
 
@@ -39,18 +40,20 @@ void test_Tri_Bulle(){
             //APPEL DE LA FONCTION DE TRI
             tri_bulle(tableau, taille);
             fin = time(NULL);
-            printf("\niteration:%d pour tableau:%d", i+1, taille);
             free(tableau);//libération du tableau en mémoire pour gain de place
             moyenne += difftime(fin,deb);
         }
         moyenne=moyenne/3;
-        printf("\nTableau de taille:%d ; tempsMoyen:%.6f", taille, moyenne);
+
+        //appel de la fonction d'ecriture dans le fichier pour permettre le remplissage des données
+        data_to_csv(nomFich, typeTri, taille, moyenne);
         taille = taille*10;//on incrémente la taille du tableau de 10 en 10
     }
 }
 
-void test_Tri_Insertion(){
+void test_Tri_Insertion(char *nomFich){
     float *tableau, moyenne;
+    char typeTri[]="Tri_Insertion";
     int taille=100;
     time_t deb, fin;
 
@@ -62,18 +65,21 @@ void test_Tri_Insertion(){
             //APPEL DE LA FONCTION DE TRI
             tri_insertion(tableau, taille);
             fin = time(NULL);
-            printf("\niteration:%d pour tableau:%d", i+1, taille);
             free(tableau);//libération du tableau en mémoire pour gain de place
             moyenne += difftime(fin,deb);
         }
         moyenne=moyenne/3;
-        printf("\nTableau de taille:%d ; tempsMoyen:%.6f", taille, moyenne);
+
+        //appel de la fonction d'ecriture dans le fichier pour permettre le remplissage des données
+        data_to_csv(nomFich, typeTri, taille, moyenne);
+
         taille = taille*10;//on incrémente la taille du tableau de 10 en 10
     }
 }
 
-void test_Tri_Selection(){
+void test_Tri_Selection(char *nomFich){
     float *tableau, moyenne;
+    char typeTri[]="Tri_Selection";
     int taille=100;
     time_t deb, fin;
 
@@ -85,18 +91,21 @@ void test_Tri_Selection(){
             //APPEL DE LA FONCTION DE TRI
             tri_selection(tableau, taille);
             fin = time(NULL);
-            printf("\niteration:%d pour tableau:%d", i+1, taille);
             free(tableau);//libération du tableau en mémoire pour gain de place
             moyenne += difftime(fin,deb);
         }
         moyenne=moyenne/3;
-        printf("\nTableau de taille:%d ; tempsMoyen:%.6f", taille, moyenne);
+
+        //appel de la fonction d'ecriture dans le fichier pour permettre le remplissage des données
+        data_to_csv(nomFich, typeTri, taille, moyenne);
+
         taille = taille*10;//on incrémente la taille du tableau de 10 en 10
     }
 }
 
-void test_Tri_Tas(){
+void test_Tri_Tas(char *nomFich){
     float *tableau, moyenne;
+    char typeTri[]="Tri_Tas";
     int taille=100;
     time_t deb, fin;
 
@@ -108,12 +117,14 @@ void test_Tri_Tas(){
             //APPEL DE LA FONCTION DE TRI
             tri_tas(tableau, taille);
             fin = time(NULL);
-            printf("\niteration:%d pour tableau:%d", i+1, taille);
             free(tableau);//libération du tableau en mémoire pour gain de place
             moyenne += difftime(fin,deb);
         }
         moyenne=moyenne/3;
-        printf("\nTableau de taille:%d ; tempsMoyen:%.6f", taille, moyenne);
+
+        //appel de la fonction d'ecriture dans le fichier pour permettre le remplissage des données
+        data_to_csv(nomFich, typeTri, taille, moyenne);
+
         taille = taille*10;//on incrémente la taille du tableau de 10 en 10
     }
 }
