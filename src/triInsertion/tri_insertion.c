@@ -2,15 +2,22 @@
 Fonction tri_bulle
 Auteur: Louis MORAND, Benoit ARQUILLIERE
 Version : 1
-But:faire le tri d'un tableau donné en parmètre par insertion
-Soit: sélectionner une valeur, et la déplacer dans le tableau jusqu'a ce qu'elle soit à sa place
 */
+
 #include <stdio.h>
 #include "tri_insertion.h"
 
 int i, j;
 float val;
 
+
+/**
+ * @brief Faire le tri d'un tableau donné en parmètre par insertion
+ *        Sélectionner une valeur, et la déplacer dans le tableau jusqu'a ce qu'elle soit à sa place
+ * 
+ * @param tab 
+ * @param tailletab 
+ */
 void tri_insertion(float *tab, int tailletab)
 {
    for (i=1; i<tailletab; ++i) {

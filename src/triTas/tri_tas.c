@@ -1,14 +1,21 @@
 /*Fonction tri_tas
 Auteur: Louis MORAND, Benoit ARQUILLIERE
 Version : 1
-but: faire le tri d'un tableau donné en parmètre par tas
-Le but est de chercher le plus grande nombre comparativement à un bout du tableau, la racine.
-D'inverser ce plus grand nombre avec la racine de maniere à le placer à un bout du tableau
-puis de travailler récursivement sur le tableau de manière à ordonner le tableau
 */
+
 #include "tri_tas.h"
 #include <stdio.h>
 
+
+/**
+ * @brief Faire le tri d'un tableau donné en parmètre par tas
+ *        Le but est de chercher le plus grande nombre comparativement à un bout du tableau, la racine.
+ *        D'inverser ce plus grand nombre avec la racine de maniere à le placer à un bout du tableau
+ *        puis de travailler récursivement sur le tableau de manière à ordonner le tableau
+ * 
+ * @param tab 
+ * @param max 
+ */
 void tri_tas (float *tab, int max){
     float nb_inter;
     float nb_max = tab[max-1];

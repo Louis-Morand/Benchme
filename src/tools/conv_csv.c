@@ -1,3 +1,8 @@
+/*Fonction main
+Auteur: Louis MORAND, Benoit ARQUILLIERE
+Version : 1
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "tools.h"
@@ -6,13 +11,15 @@
 #include "../triSelection/tri_selection.h"
 #include "../triTas/tri_tas.h"
 
-/*Fonction main
-Auteur: Louis MORAND, Benoit ARQUILLIERE
-Version : 1
-Fonction permettant la conversion au format .csv des données passées en paramètre
-Prends en entrée les temps moyens de calcul pour les 4 fonctions et eur type, les écrit sur un fichier .Csv, créé ou ouvert au besoin
-*/
 
+/**
+ * @brief Fonction permettant la conversion au format .csv des données passées en paramètre
+ *        Prends en entrée les temps moyens de calcul pour les 4 fonctions et eur type, les écrit sur un fichier .Csv, créé ou ouvert au besoin
+ * 
+ * @param TypeTri 
+ * @param taille_Echantillon 
+ * @param Exec_Moyen 
+ */
 void conv_csv(char *TypeTri,int taille_Echantillon, float Exec_Moyen){
     FILE *fich;//Création d'un pointeur de type fichier
     fich = fopen("./resultats.csv","a");//ouverture, et création du fichier si il n'existe pas, pour rajout de conetnu via l'option a
