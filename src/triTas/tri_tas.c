@@ -9,12 +9,15 @@ Version : 1
 
 /**
  * @brief Faire le tri d'un tableau donné en parmètre par tas
- *        Le but est de chercher le plus grande nombre comparativement à un bout du tableau, la racine.
- *        D'inverser ce plus grand nombre avec la racine de maniere à le placer à un bout du tableau
- *        puis de travailler récursivement sur le tableau de manière à ordonner le tableau
+ *        
+ *  Le but est de chercher le plus grande nombre et de la placer à un bout du tableau, pour constituer la racine.
+ *  Le fonctionement consiste à inverser le plus grand nombre trouvé avec la racine actuelle de maniere à le placer à un bout du tableau,
+ *  pour constituer la nouvelle racine, puis de travailler récursivement sur le tableau juqu'a ce qu'il soit trié,
+ *  en passant à chaque fois en paramètre le tableau sans les nombres déjà triés.
+ * Cependant, cet algorithme n'est potentiellement pas une implémentation correcte du tri par tas
  * 
- * @param tab 
- * @param max 
+ * @param tab Tableau à trier
+ * @param max Taille du tableau à trier
  */
 void tri_tas (float *tab, int max){
     float nb_inter;

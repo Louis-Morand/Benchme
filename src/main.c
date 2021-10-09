@@ -1,7 +1,7 @@
 /*Fonction main
 Auteur: Louis MORAND, Benoit ARQUILLIERE
 Version : 1
-Fonction globale regroupant l'affectation, les tests, et le rendu au format .csv des résultats.
+Fonction globale permettant l'appel aux fonctions de test, qui regroupent l'affectation, les tests, et le rendu au format .csv des résultats.
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,7 +16,6 @@ Fonction globale regroupant l'affectation, les tests, et le rendu au format .csv
 
 int main(int argc, char *argv[]){
 
-    
     test_Tri_Bulle(argv[1]);
     test_Tri_Insertion(argv[1]);
     test_Tri_Selection(argv[1]);

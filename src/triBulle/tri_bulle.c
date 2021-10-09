@@ -9,9 +9,10 @@ Version : 1
 
 /**
  * @brief Faire le tri d'un tableau donné en paramètre par bulle
- *        Tri des valeurs du tableau 2 à 2, en bouclant sur le tableau jusqu'a ce qu'il soit trié
- * @param tab 
- * @param tailletab 
+ *        Trie les valeurs du tableau 2 à 2, en bouclant sur le tableau jusqu'a ce qu'il soit trié.
+ * 
+ * @param tab Tableau à trier
+ * @param tailletab Taille du tableau passé en paramètre
  */
 void tri_bulle (float *tab, int tailletab){
     //on ne peux pas trouver la taille du tableau via sizeoftab/sizeof(char), donc on la passe en parametre
