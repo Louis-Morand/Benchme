@@ -104,7 +104,8 @@ make documentation
 
 ## Résultats attendus
 
-Le programme doit tester les tri en leur passant 3 tableaux de taille déterminées et dont les valeurs sont aléatoirement selectionnées. Suite à cela il doit être capable de créer ou modifier un fichier CSV afin d'y inserer les temps d'éxecutions obtenus. Il sera ensuite possible, à l'aide d'un tableur, de visualiser les données et de créer des graphiques à partir de ces dernières.
+Le programme doit tester les tris en leur passant 3 tableaux de taille déterminées et dont les valeurs sont aléatoirement selectionnées. Suite à cela il doit être capable de créer ou modifier un fichier CSV afin d'y inserer les temps d'éxecutions obtenus. Il sera ensuite possible, à l'aide d'un tableur, de visualiser les données et de créer des diagrammes à partir de ces dernières. Des temps d'éxecution de plus en plus longs sont attendus au fur et à mesure de l'augmentation de la taille des tableaux.  
+Cependant, en raison de du temps de calcul import du à la taille des tableau, nous n'avons pas pu calculer et afficher les temps pour les différentes valeurs.
 
 <br />
 <div id="futur"></div>  
@@ -112,7 +113,7 @@ Le programme doit tester les tri en leur passant 3 tableaux de taille détermin�
 ## Evolutions à venir
 
 Actuellement le programme ne permet que de trier des valeurs dans le sens croissant, il serait possible d'ajouter la possibilité de faire des tris décroissants.  
-Il existe de nombreux autres algorithmes de tri, il serait donc possible d'en ajouter d'avantage graçe à la flexibilité du code. Il serait également interessant de pouvoir choisir au lancement du programme le tri souhaité, ainsi que le nombre de tableau à tester.
+Il existe de nombreux autres algorithmes de tri plus performants, il serait donc possible d'en ajouter d'avantage graçe à la flexibilité du code. Il serait également intéressant de pouvoir choisir au lancement du programme le tri souhaité, ainsi que le nombre de tableau à tester.
 
 
 <p align="right">|<a href="#top">Revenir en haut</a>|</p>
