@@ -6,6 +6,7 @@ Fonction globale regroupant l'affectation, les tests, et le rendu au format .csv
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 #include "./triInsertion/tri_insertion.h"
 #include "./triBulle/tri_bulle.h"
 #include "./triSelection/tri_selection.h"
@@ -18,12 +19,13 @@ TODO: fait une fonction pour mettre au format csv => plus propre ?
 //Attention, tri à bulle limité à 10⁵ maximum
 
 
-float* crea_tab(taille_tab, graine){
+float* crea_tab(int taille_tab, int graine){
     //Fonction de création et remplissage du tableau selon les paramètres donnés.
-    float tableau[taille_tab];
+    float *tableau;
+    tableau = malloc(taille_tab*sizeof(float));
     srand(graine);
     for(int i=0;i<taille_tab;i++){
-        tableau[i]= ((rand() % pow(10,6))+1);
+        tableau[i]= ((rand() % (int)pow(10,6))+1);
     }
     return tableau;
 }
@@ -52,11 +54,11 @@ void main(){
 
     tri_insertion(tableau, taille);
 
-    tri_selection(tableau, taille);
+    //tri_selection(tableau, taille);
 
     tri_tas(tableau, taille);
 
     tri_bulle(tableau, taille);
 
-	return (0);
+	return ;
 }
