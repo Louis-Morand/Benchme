@@ -14,8 +14,6 @@ Fichier regroupant les différentes fonctions de tri
 #include "../triSelection/tri_selection.h"
 #include "../triTas/tri_tas.h"
 
-
-
 float* crea_tab(int taille_tab, int graine){
     
     //Fonction de création et remplissage du tableau selon les paramètres donnés.
@@ -29,7 +27,6 @@ float* crea_tab(int taille_tab, int graine){
 }
 
 void test_Tri_Bulle(){
-    printf("COUCOU\n");
     float *tableau, moyenne;
     int taille=100;
     time_t deb, fin;
@@ -39,13 +36,11 @@ void test_Tri_Bulle(){
         for(int i=0;i<3;i++){//on veux que chaque algo soit testé 3 fois par taille de tableau, avec des valeurs différentes
             tableau = crea_tab(taille, i);
             deb = time(NULL);
-            //printf("\ntempsDeb:%d", deb);
             //APPEL DE LA FONCTION DE TRI
             tri_bulle(tableau, taille);
             fin = time(NULL);
             printf("\niteration:%d pour tableau:%d", i+1, taille);
             free(tableau);//libération du tableau en mémoire pour gain de place
-            //printf("\ntempsFin:%d", fin);
             moyenne += difftime(fin,deb);
         }
         moyenne=moyenne/3;
@@ -64,13 +59,11 @@ void test_Tri_Insertion(){
         for(int i=0;i<3;i++){//on veux que chaque algo soit testé 3 fois par taille de tableau, avec des valeurs différentes
             tableau = crea_tab(taille, i);
             deb = time(NULL);
-            //printf("\ntempsDeb:%d", deb);
             //APPEL DE LA FONCTION DE TRI
             tri_insertion(tableau, taille);
             fin = time(NULL);
             printf("\niteration:%d pour tableau:%d", i+1, taille);
             free(tableau);//libération du tableau en mémoire pour gain de place
-            //printf("\ntempsFin:%d", fin);
             moyenne += difftime(fin,deb);
         }
         moyenne=moyenne/3;
@@ -89,13 +82,11 @@ void test_Tri_Selection(){
         for(int i=0;i<3;i++){//on veux que chaque algo soit testé 3 fois par taille de tableau, avec des valeurs différentes
             tableau = crea_tab(taille, i);
             deb = time(NULL);
-            //printf("\ntempsDeb:%d", deb);
             //APPEL DE LA FONCTION DE TRI
             tri_selection(tableau, taille);
             fin = time(NULL);
             printf("\niteration:%d pour tableau:%d", i+1, taille);
             free(tableau);//libération du tableau en mémoire pour gain de place
-            //printf("\ntempsFin:%d", fin);
             moyenne += difftime(fin,deb);
         }
         moyenne=moyenne/3;
@@ -114,13 +105,11 @@ void test_Tri_Tas(){
         for(int i=0;i<3;i++){//on veux que chaque algo soit testé 3 fois par taille de tableau, avec des valeurs différentes
             tableau = crea_tab(taille, i);
             deb = time(NULL);
-            //printf("\ntempsDeb:%d", deb);
             //APPEL DE LA FONCTION DE TRI
             tri_tas(tableau, taille);
             fin = time(NULL);
             printf("\niteration:%d pour tableau:%d", i+1, taille);
             free(tableau);//libération du tableau en mémoire pour gain de place
-            //printf("\ntempsFin:%d", fin);
             moyenne += difftime(fin,deb);
         }
         moyenne=moyenne/3;

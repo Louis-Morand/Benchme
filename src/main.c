@@ -22,9 +22,9 @@ TODO: fait une fonction pour mettre au format csv => plus propre ?
 void main(){
 
     void test_Tri_Bulle();
-    void test_Tri_Insertion();
-    void test_Tri_Selection();
-    void test_Tri_Tas();
+    test_Tri_Insertion();
+    test_Tri_Selection();
+    test_Tri_Tas();
 
 	return;
 }
