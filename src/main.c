@@ -31,34 +31,53 @@ float* crea_tab(int taille_tab, int graine){
 }
 
 void test_generique(){//renommer et changer pour chaque algo de tri
-    float *tableau;
+    float *tableau, moyenne;
     int taille=100;
-    for (int j = 0; j < 3; j++){//on veux tester chaque algo 3 fois avec des tableaux différents
-        for(int i=0;i<6;i++){//on veux des tableau de 100 à 10⁷ valeurs, donc 6 itérations
-            tableau = crea_tab(taille, j);
-            //TODO: mettre tests relatifs à l'exécution par algo
-            // Mettre résultat dans fichier
-            taille = taille*10;
+    time_t deb, fin;
+
+    for (int j = 0; j < 6; j++){//on veux tester chaque algo avec 6 tableaux différents, de 100 à 10⁷ valeurs, donc 6 itérations
+        moyenne = 0; //initialisation de la taille de base du tableau, et de la moyenne, à chaque nouvelle taille de tableau testé
+        for(int i=0;i<3;i++){//on veux que chaque algo soit testé 3 fois par taille de tableau, avec des valeurs différentes
+            tableau = crea_tab(taille, i);
+            deb = time(NULL);
+            //printf("\ntempsDeb:%d", deb);
+            //APPEL DE LA FONCTION DE TRI
+            tri_insertion(tableau, taille);
+            fin = time(NULL);
+            printf("\niteration:%d pour tableau:%d", i+1, taille);
+            free(tableau);//libération du tableau en mémoire pour gain de place
+            //printf("\ntempsFin:%d", fin);
+            moyenne += difftime(fin,deb);
         }
+        moyenne=moyenne/3;
+        printf("\nTableau de taille:%d ; tempsMoyen:%.6f", taille, moyenne);
+        taille = taille*10;//on incrémente la taille du tableau de 10 en 10
     }
 }
 
 void main(){
     
-    int taille = 10;
-    float tableau[taille];
-    for(int i=0;i<=taille; i++){
-        tableau[i]= ((rand() % 1000000)+1);
-    }
+    // int taille = 10;
+    // float tableau[taille];
+    // for(int i=0;i<=taille; i++){
+    //     tableau[i]= ((rand() % 1000000)+1);
+    // }
 
+    // printf("\n");
+    // for(int i=0;i<=taille; i++){
+    //     printf("%.2f; ", tableau[i]);
+    // }
+    // printf("\n");
 
-    tri_insertion(tableau, taille);
+    // tri_insertion(tableau, taille);
 
-    //tri_selection(tableau, taille);
+    // tri_selection(tableau, taille);
 
-    tri_tas(tableau, taille);
+    // tri_tas(tableau, taille);
 
-    tri_bulle(tableau, taille);
+    // tri_bulle(tableau, taille);
+    //test avec tri_bulle
+    test_generique();
 
-	return ;
+	return;
 }

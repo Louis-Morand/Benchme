@@ -1,3 +1,10 @@
+/*
+Fonction tri_bulle
+Auteur: Louis MORAND, Benoit ARQUILLIERE
+Version : 1
+But:faire le tri d'un tableau donné en parmètre par insertion
+Soit: sélectionner une valeur, et la déplacer dans le tableau jusuq'a ce qu'elle soit à sa place
+*/
 #include <stdio.h>
 #include "tri_insertion.h"
 
